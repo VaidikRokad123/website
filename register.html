@@ -1,0 +1,160 @@
+<html>
+
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2479092370334789"
+     crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        li {
+            float: right;
+            margin: 1.5%;
+            display: block;
+            font-size: 19px;
+        }
+
+        ul {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            background-color: black;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        footer li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        footer a {
+            color: #FF8C00;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav style="background-color: black" bgcolor="black">
+
+        <ul>
+            <li><a href="register.html"><button type="button">register</button></a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="news.html">news</a></li>
+            <li><a href="cart.html">cart</a></li>
+            <li><a href="product.html">product</a></li>
+            <li><a href="home.html">home</a></li>
+            <li style="float: left;margin: 0.5%;"><a href="home.html"><img src="logo.png" height="50" width="171"></a>
+            </li>
+        </ul>
+
+    </nav>
+    <br>
+    <br>
+    <br>
+
+    <div style.border="thick solid">
+        <form style="color: silver;" onsubmit="return validateForm()">
+
+            <center>
+                <label>First Name:-</label><input type="text" name="Firstname" required> <br> <br>
+                <label>Last Name:-</label><input type="text" name="lastname" required> <br> <br>
+                <label>E-Mail:-</label><input type="email" name="email" required> <br> <br>
+                Password:-<input type="password" name="pass" required> <br> <br>
+                Date of Birth:-<input type="date" name="date" required> <br> <br>
+                City:-<select>
+                    <option>ahmedabad</option>
+                    <option>Amreli</option>
+                    <option>Surat</option>
+                    <option>Rajkot</option>
+                    <option>Bhavanager</option>
+                    <option>Junaghabh</option>
+                </select><br><br>
+                Gender:-<input type="radio" name="Gender" id="male" value="MALE"> Male
+                <input type="radio" name="Gender" id="female" value="FEMALE"> Female
+                <input type="radio" name="Gender" id="other" value="OTHER"> Other <br> <br>
+                Mobile:-<input type="tel" name="Mobile" pattern="[0-9]{10}" maxlength="10" placeholder="Enter 10-digit number" required> <br> <br>
+                Address <textarea name="Please Enter Your Address...!!" placeholder="hello"></textarea> <br> <br> <br>
+
+                <button type="submit" value="Submit"> Submit </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="reset" value="Reset"> Reset </button>
+            </center>
+
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var firstName = document.forms[0]["Firstname"].value;
+            var lastName = document.forms[0]["lastname"].value;
+            var email = document.forms[0]["email"].value;
+            var password = document.forms[0]["pass"].value;
+            var mobile = document.forms[0]["Mobile"].value;
+
+            if (firstName === "" || lastName === "" || email === "" || password === "" || mobile === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+
+<br><br><br><br>
+
+<footer>
+    <ul>
+
+        <li>Contact us via <a href="vaidik.rokad@gmail.com" target="_blank">Email</a></li>
+        <li>Connect on <a href="https://www.facebook.com/vaidik.rokad/" target="_blank">Facebook</a></li>
+        <li>Follow us on <a href="https://www.instagram.com/vaidik_rokad/?igshid=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr" target="_blank">Instagram</a></li>
+    </ul>
+    <p style="text-align: left;">&copy; Asus by VAIDIK. All Rights Reserved.</p>
+</footer>
+
+
+</body>
+
+</html>
